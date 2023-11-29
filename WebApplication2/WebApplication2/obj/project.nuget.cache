@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "xYiARH3nThNJhD8bsnivziD4ry/xMIx1qRTPruKzyLB7mb/TtrfxhfKTT+8oZVa1Th84C3VmQnjEAl47qiZPGA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\claire\\Desktop\\SYSTEM\\DIGITAL KIOSK SYSTEM\\KioskVer1\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\claire\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.22\\microsoft.windowsdesktop.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\claire\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.22\\microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\claire\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.22\\microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\claire\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.22\\microsoft.netcore.app.host.win-x64.6.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

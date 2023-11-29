@@ -1,0 +1,303 @@
+html {
+  font-size: 14px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 0px;
+    background-color: ghostwhite;/*#F8F8FF;*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    background-color: maroon;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    color:white;
+}
+
+/* Horizontal top nav main components*/
+.sidebar div.horibar {
+    padding:10px 0px;
+}
+
+.sidebar div.horibar button {
+    margin-right: 10px;
+    width: 25px;
+    color:maroon;
+    font-weight:bold;
+    border:1px solid white;
+    background-color: white;
+    border-radius:2px;
+    text-align:center;
+}
+
+
+/* Something like the nav-brand*/
+.sidebar div.logo-brand {
+    padding: 0px;
+}
+.sidebar div.logo-brand img {
+    padding-left:14px;
+    width:50px;
+    height:35px;
+}
+
+.sidebar div.logo-brand h6 {
+    padding-left:10px;
+    margin:0px;
+    font-weight:bold;
+    font-size:small;
+}
+
+/* Dropdown menu items*/
+.sidebar div.colItems hr {
+    border: 1px solid white;
+    margin-top:5px;
+}
+
+.sidebar div.colItems hr.ehr {
+    border: 1px solid maroon;
+    margin-top:5px;
+}
+
+.sidebar div.colItems h6 {
+    padding-left: 16px;
+    padding-bottom:5px;
+    font-weight:bold;
+    
+}
+
+/* Sidebar links */
+.sidebar a:link {
+  display: block;
+  color: white;
+  padding: 14px 14px 14px 32px;
+  text-decoration: none;
+}
+
+.sidebar a:visited {
+  color: white;
+  background-color:maroon;
+}
+
+.sidebar a:hover {
+  color:maroon;
+  background-color:white;
+}
+
+/* Main body containers*/
+div.content {
+  margin-left: 270px;
+  height: fit-content;
+}
+
+/* On screens that are less than 992px wide, make the sidebar into a topbar */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  div.colItems {
+    display: none;
+  }
+  .sidebar a {
+    text-align: justify;
+    float: none;
+  }
+  div.content {
+      margin-left: 0px;
+  }
+}
+
+/*icon tags*/
+i {
+    text-align:center;
+    width:25px;
+}
+
+.im-icon {
+    text-align: center;
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+/*heading style in all pages*/
+
+/*
+.container-fluid {
+    background-color: white;
+    padding:0px;
+}*/
+
+.heading {
+    color: darkslategrey;
+    padding: 12px 45px;
+    margin-bottom: 24px;
+    font-weight:bold;
+}
+
+.page-comp-outer {
+    padding:0px 32px;
+    color:darkslategrey;
+    margin-bottom:24px;
+}
+
+.page-comp-outer h6 {
+    font-weight:bold;
+}
+
+.page-comp-inner {
+    border-radius: 8px;
+    padding:28px;
+    min-height:200px;
+    height:fit-content;
+}
+
+.page-comp-inner a {
+    text-decoration:none;
+}
+
+.page-comp-inner div.pci-txt {
+    margin-top:12px;
+    padding:10px;/*
+    background-color: #fafafa;*/
+    height:fit-content;
+    min-height:100px;
+    border-radius:6px;
+}
+
+/*
+    .page-comp-inner div.pci-head {
+    width:100%;
+    background-color:transparent
+}
+
+*/
+
+/*----------------------------------------------------*/
+
+
+.text-justify {
+    text-align:justify;
+}
+
+textarea {
+    resize: none;
+}
+
+/*primary secondary tertiary buttons*/
+
+.btn-secondary {
+    width: 100%;
+}
+
+.btn-secondaryx {
+    width: 100%;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.btn-secondaryx:hover {
+    background-color: #e8e8e8;
+}    
+
+.btn-light{
+    width:100%;
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0;
+}
+
+/*small secondary button in main page*/
+.btn-secondaryz {
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    color: black;
+}
+
+.btn-secondaryz:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-lightz {
+    border-color: gray;
+    color: black;
+}
+
+.btn-lightz:hover {
+    border-color: #f0f0f0;
+}
+
+/*-----------------------------------------*/
+.btn-save, .btn-cancel {
+    width: 100%;
+}
+
+.btn-save {
+    background-color: slategrey;
+    color: white;
+}
+
+.btn-save:hover {
+    color: white;
+    opacity: 0.7;
+}
+
+.btn-cancel {
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+.btn-cancel:hover {
+    opacity: 0.6;
+
+}
+
+.secondary-button {
+    text-decoration:none;
+    color:darkslategrey;
+    background-color:white;
+    border:1px solid darkslategrey;
+    border-radius:4px;
+    padding: 2px 20px;
+    font-weight:400
+}
+
+.secondary-button:hover {
+    color: darkslategrey;
+    opacity:0.7;
+    border:1.5px solid darkslategrey
+}
+/*
+    .btn-lightz {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: black;
+}
+
+.btn-lightz:hover {
+    background-color: #f0f0f0;
+}
+*/

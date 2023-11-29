@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PUPPQ Digital Information Kiosk</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication2.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="horibar d-flex justify-content-between align-items-center">
+            <div class="logo-brand d-flex align-items-center"><img src="~/images/school-logo.png" /><h6>PUP PARANAQUE<br />DIGITAL INFORMATION KIOSK</h6></div>
+            <button class="icon-menu d-lg-none" id="icon-menu" type="button" onclick="menu()"><i class="im-icon fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="colItems d-lg-block" id="colItems">
+            <hr />
+            <h6>CAMPUS PROFILE</h6>
+            <a class="basic" asp-area="" asp-controller="AdminBasic" asp-action="ShowBasicDetails"><i class="fa-solid fa-file-lines"></i> Basic Details</a>
+            <a class="official" asp-area="" asp-controller="AdminOfficials" asp-action="ShowOfficials"><i class="fa-solid fa-sitemap"></i> Officials</a>
+            <a class="facility" asp-area="" asp-controller="AdminFacility" asp-action="ShowFacilities"><i class="fa-solid fa-industry"></i> Facilities</a>
+            <a class="certificate" asp-area="" asp-controller="AdminCertificate" asp-action="ShowCertificates"><i class="fa-solid fa-award"></i> Certifications</a>
+            <a class="partner" asp-area="" asp-controller="AdminPartnership" asp-action="ShowPartnerships"><i class="fa-solid fa-handshake-angle"></i> Partnerships</a>
+            <hr />
+            <h6>ACCOUNTS</h6>
+            <a class="users" asp-area="" asp-controller="AdminMngUser" asp-action="ShowUsers"><i class="fa-solid fa-user"></i> Manage Users</a>
+            <a class="setting" asp-area="" asp-controller="AdminAccntSettings" asp-action="ShowAccountSettings"><i class="fa-solid fa-gear"></i> Account Settings</a>
+            <hr class="ehr"/>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="content" id="content">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    
+    
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

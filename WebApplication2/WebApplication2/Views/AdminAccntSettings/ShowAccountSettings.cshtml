@@ -1,0 +1,105 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Account Settings";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminAS.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+</head>
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Account Settings</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid rounded-3 d-flex justify-content-between align-items-center p-4" style="background-color:maroon;color:white">
+        <table class="d-none d-lg-table" style="color:white">
+            <tbody>
+                <tr>
+                    <td rowspan="3" style="width:140px"><div class="rounded-circle" style="background-color:white;width:110px;height:110px"></div></td>
+                    <td><h5 class="m-0">NICKNAME</h5></td>
+                </tr>
+                <tr>
+                    <td>OFFICE NAME</td>
+                </tr>
+                <tr>
+                    <td><a asp-area="" asp-controller="AdminAccntSettings" asp-action="EditProfile" class="btn btn-edit-profile">Edit profile</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="d-lg-none" style="color:white;text-align:center">
+            <tbody>
+                <tr>
+                    <td><div class="rounded-circle" style="background-color:white;width:110px;height:110px;margin-right:auto;margin-left:auto"></div></td>
+                </tr>
+                <tr>
+                    <td><h5 class="m-0" style="padding-bottom:8px;padding-top:15px">NICKNAME</h5></td>
+                </tr>
+                <tr>
+                    <td style="padding-bottom:8px">OFFICE NAME</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">Contact Information</h6>
+    </div>
+    <hr class="m-0" />
+    <div class="container-fluid bg-white rounded-bottom p-3" style="height:fit-content">
+        <table>
+            <tbody>
+                <tr>
+                    <td style="width:70px"><b>Phone:</b></td>
+                    <td class="text-muted">0987 654 3210</td>
+                </tr>
+                <tr>
+                    <td style="width:60px"><b>Email:</b></td>
+                    <td class="text-muted">emailsample@webname.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">Account Credentials</h6>
+        <a asp-area="" asp-controller="AdminAccntSettings" asp-action="ChangePassword" class="btn btn-secondaryz btn-sm d-none d-lg-block m-0 py-1.25 px-4">Change password</a>
+    </div>
+    <hr class="m-0" />
+    <div class="container-fluid bg-white rounded-bottom p-3" style="height:fit-content">
+        <table>
+            <tbody>
+                <tr>
+                    <td style="width:90px"><b>Username:</b></td>
+                    <td class="text-muted">Juana</td>
+                </tr>
+                <tr>
+                    <td style="width:90px"><b>Password:</b></td>
+                    <td class="text-muted">**********</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- buttons -->
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid pt-3 px-0 d-lg-none" style="background-color:transparent">
+        <a class="btn btn-secondary" asp-area="" asp-controller="AdminAccntSettings" asp-action="EditProfile">Edit profile</a>
+    </div>
+    <div class="container-fluid pt-3 px-0 d-lg-none" style="background-color:transparent">
+        <a class="btn btn-secondary" asp-area="" asp-controller="AdminAccntSettings" asp-action="ChangePassword">Change password</a>
+    </div>
+    <div class="container-fluid pt-3 px-0" style="background-color:transparent">
+        <a href="#" class="btn btn-secondaryx">Logout</a>
+    </div>
+</div>

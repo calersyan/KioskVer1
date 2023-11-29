@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Basic Details";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminBD.css" asp-append-version="true" />
+</head>
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Basic Details - Edit</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">Main Description</h6>
+    </div>
+    <hr class="m-0" />
+    <form>
+        <div class="container-fluid bg-white rounded-bottom px-3 pt-3 pb-4" style="min-height:150px; height:fit-content">
+            <div class="container-fluid p-0 d-flex flex-column">
+                <div class="mt-2 mb-3">
+                    <textarea class="form-control" style="height:47vh" placeholder="Type here..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex flex-column px-0 py-4" style="height:fit-content">
+            <button type="submit" class="btn btn-secondary">Save</button>
+        </div>
+        <div class="container-fluid d-flex flex-column p-0" style="height:fit-content">
+            <a type="reset" asp-area="" asp-controller="AdminBasic" asp-action="ShowBasicDetails" class="btn btn-secondaryx">Cancel</a>
+        </div>
+
+    </form>
+</div>

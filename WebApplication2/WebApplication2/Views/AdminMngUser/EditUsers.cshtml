@@ -1,0 +1,91 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminMU.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+</head>
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Manage Users - Edit User</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">User Profile</h6>
+    </div>
+    <hr class="m-0" />
+    <div class="container-fluid bg-white rounded-bottom px-3 pt-3 pb-4" style="min-height:150px; height:fit-content">
+        <div class="container-fluid p-0 d-flex flex-column">
+            <div class="mt-2 mb-3">
+                <table class="text-muted w-100 m-0">
+                    <tbody>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Affliated Office</td>
+                            <td style="padding-left:10px">: Academics</td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Nickname</td>
+                            <td style="padding-left:10px">: Nikky Minaj</td>
+                        </tr>
+                        <tr style="vertical-align:middle">
+                            <td colspan="2"><hr class="my-3"/></td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Username</td>
+                            <td style="padding-left:10px;padding-bottom:10px">: Usernameeminem</td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Phone</td>
+                            <td style="padding-left:10px;padding-bottom:10px">: 0987 654 3210</td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Email</td>
+                            <td style="padding-left:10px;padding-bottom:10px">: pnusr3#uber.commerce</td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Date created</td>
+                            <td style="padding-left:10px">: 10-31-2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex flex-column px-0 py-4" style="height:fit-content">
+        <a asp-area="" asp-controller="AdminMngUser" asp-action="ChangePassword" class="btn btn-secondary">Change password</a>
+    </div>
+    <div class="container-fluid d-flex flex-column px-0 pt-0 pb-4" style="height:fit-content">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Remove</button>
+    </div>
+    <div class="container-fluid d-flex flex-column p-0" style="height:fit-content">
+        <a asp-area="" asp-controller="AdminMngUser" asp-action="ShowUsers" class="btn btn-secondaryx">Cancel</a>
+    </div>
+</div>
+
+<form class="d-none">
+    <button type="submit" id="btnSubmit">submit</button>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+            </div>
+            <div class="modal-body">
+                Are you sure you would like to remove this account?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="document.getElementById('btnSubmit').click();">Remove account</button>
+                <button type="button" class="btn bg-light py-2" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

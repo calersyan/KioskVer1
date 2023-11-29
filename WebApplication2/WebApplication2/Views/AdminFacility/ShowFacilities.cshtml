@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Facilities";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminFC.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+</head>
+
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Facilities</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">List of Facilities and Details</h6>
+        <a asp-area="" asp-controller="AdminFacility" asp-action="AddFacilities" class="btn btn-secondaryz btn-sm m-0 py-1.25 px-4">Add</a>
+    </div>
+    <hr class="m-0" />
+    <div class="container-fluid bg-white rounded-bottom p-3" style="height:fit-content">
+        <!-- use this div tag if there is record in db else use the table below, same with the others
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center p-0" style="min-height:inherit; height:inherit">
+            <h5 class="fw-normal" style="color:lightgray">nothing to show yet</h5>
+        </div>
+        -->
+
+        <div class="row border-bottom px3 pt-3 pb-4 mx-2 mx-lg-5">
+            <div class="col col-12 p-0">
+                <p class="text-muted text-start fw-bold">School Clinic</p>
+                <p class="text-muted text-start">Bldg. 1 Room 105</p>
+                <p class="text-muted text-start">M-T-W-TH-F | 9:00 AM - 4:00 PM</p>
+            </div>
+            <div class="col col-12 p-0">
+                <p class="text-muted text-start fw-bold">Description :</p>
+                <p class="text-muted text-start">Designer at work who don't have any content for their product yet have the possibility to insert a dummy text into their design to judge on the arrangement of text on their site, on readability or on fonts and sizes.Designer at work who don't have any content for their product yet have the possibility to insert a dummy text into their design to judge on the arrangement of text on their site, on readability or on fonts and sizes.</p>
+            </div>
+            <div class="col col-12 p-0">
+                <div class="container-fluid d-flex justify-content-end p-0">
+                    <a asp-area="" asp-controller="AdminFacility" asp-action="EditFacilities" class="btn btn-lightz btn-sm m-0 py-1.25 px-4">Edit</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

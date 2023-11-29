@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Partnerships";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminPT.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+</head>
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Partnerships</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">List of Partnerships</h6>
+        <a asp-area="" asp-controller="AdminPartnership" asp-action="AddPartnerships" class="btn btn-secondaryz btn-sm m-0 py-1.25 px-4">Add</a>
+    </div>
+    <hr class="m-0" />
+    <div class="container-fluid bg-white rounded-bottom p-3" style="height:fit-content">
+        <!-- use this div tag if there is record in db else use the table below, same with the others
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center p-0" style="min-height:inherit; height:inherit">
+            <h5 class="fw-normal" style="color:lightgray">nothing to show yet</h5>
+        </div>
+        -->
+
+        <!--table heading-->
+        <div class="container-fluid p-0 d-none d-lg-block">
+            <div class="row border-bottom align-items-center p-3">
+                <div class="col col-4 d-none d-lg-table-cell py-0 ps-0 pe-3 m-0">
+                    <p class="text-muted text-start m-0">Name</p>
+                </div>
+                <div class="col col-3 d-none d-lg-table-cell py-0 ps-0 pe-3 m-0">
+                    <p class="text-muted text-start m-0">Owner</p>
+                </div>
+                <div class="col col-2 d-none d-lg-table-cell p-0 m-0">
+                    <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                        Date uploaded
+                    </div>
+                </div>
+                <div class="col col-3 d-none d-lg-table-cell p-0 m-0">
+                    <div class="container-fluid d-flex justify-content-end p-0">
+                        <p class="text-muted px-3 m-0">Action</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row border-bottom align-items-center p-3">
+            <div class="col col-9 col-lg-4 py-0 ps-0 pe-3 m-0" style="overflow:hidden">
+                <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                    <i class="fa-solid fa-file-image"></i> application records for sy 2023-2024 V2
+                </div>
+            </div>
+            <div class="col col-3 d-none d-lg-table-cell py-0 ps-0 pe-3 m-0">
+                <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                    User
+                </div>
+            </div>
+            <div class="col col-2 d-none d-lg-table-cell p-0 m-0">
+                <p class="text-muted text-start m-0">10-31-2023</p>
+            </div>
+            <div class="col col-3 p-0 m-0">
+                <div class="container-fluid d-flex justify-content-end p-0">
+                    <button type="button" class="btn btn-lightz btn-sm m-0 py-1.25 px-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Remove</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you would like to remove this item?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="document.getElementById('btnSubmit').click();">Remove item</button>
+                                    <button type="button" class="btn bg-light py-2" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form>
+                        <button type="submit" id="btnSubmit" class="d-none btn btn-lightz btn-sm m-0 py-1.25 px-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Facilities";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminFC.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+</head>
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Facilities - Add</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">Facility's Details</h6>
+    </div>
+    <hr class="m-0" />
+    <form>
+        <div class="container-fluid bg-white rounded-bottom px-3 pt-3 pb-4" style="min-height:150px; height:fit-content">
+            <div class="container-fluid p-0 d-flex flex-column">
+                <div class="form-floating mt-2 mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="facilityname">
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <label>Schedule:</label>
+                        <div class="d-flex flex-row">
+                            <div class="p-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="M" id="option1">
+                                    <label class="form-check-label" for="option1">
+                                        Monday
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="T" id="option2">
+                                    <label class="form-check-label" for="option2">
+                                        Tuesday
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="W" id="option3">
+                                    <label class="form-check-label" for="option3">
+                                        Wednesday
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="TH" id="option4">
+                                    <label class="form-check-label" for="option4">
+                                        Thursday
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="F" id="option5">
+                                    <label class="form-check-label" for="option5">
+                                        Friday
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="ST" id="option6">
+                                    <label class="form-check-label" for="option6">
+                                        Saturday
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="SN" id="option7">
+                                    <label class="form-check-label" for="option7">
+                                        Sunday
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="time" class="form-control" id="floatingInput" placeholder="time1">
+                        <label for="floatingInput">Opening</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="time" class="form-control" id="floatingInput" placeholder="time2">
+                        <label for="floatingInput">Closing</label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="place">
+                    <label for="floatingInput">Place</label>
+                </div>
+                <div class="mb-3">
+                    <label for="textarea" class="form-label">Description:</label>
+                    <textarea class="form-control" style="height:20vh" placeholder="Type description here..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex flex-column px-0 py-4" style="height:fit-content">
+            <button type="submit" class="btn btn-secondary">Add</button>
+        </div>
+        <div class="container-fluid d-flex flex-column p-0" style="height:fit-content">
+            <a type="reset" asp-area="" asp-controller="AdminFacility" asp-action="ShowFacilities" class="btn btn-secondaryx">Cancel</a>
+        </div>
+    </form>
+</div>

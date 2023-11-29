@@ -1,0 +1,163 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminMU.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+</head>
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Manage Users</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">Active Accounts</h6>
+        <div class="dropdown">
+            <a class="btn btn-secondaryz btn-sm m-0 py-1.25 px-4" data-bs-toggle="dropdown" aria-expanded="false" id="dd-menulink" role="button">Add</a>
+            <ul class="dropdown-menu" arial-labelledby="dd-menulink">
+                <li><a asp-area="" asp-controller="AdminMngUser" asp-action="AddUserAccount" class="dropdown-item">User account</a></li>
+                <li><a asp-area="" asp-controller="AdminMngUser" asp-action="AddAdminAccount" class="dropdown-item">Admin account</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="m-0" />
+    <div class="container-fluid bg-white rounded-bottom p-3" style="height:fit-content">
+        <!-- use this div tag if there is record in db else use the table below, same with the others
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center p-0" style="min-height:inherit; height:inherit">
+            <h5 class="fw-normal" style="color:lightgray">nothing to show yet</h5>
+        </div>
+        -->
+
+        <!--table heading-->
+        <div class="container-fluid d-none d-lg-block p-0">
+            <div class="row border-bottom align-items-center p-3">
+                <div class="col col-2 p-0 m-0">
+                    <p class="text-muted text-start m-0">Type</p>
+                </div>
+                <div class="col col-7 col-lg-2 py-0 ps-0 pe-3 m-0">
+                    <p class="text-muted text-start m-0">Username</p>
+                </div>
+                <div class="col col-2 d-none d-lg-table-cell p-0 m-0">
+                    <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                        Phone
+                    </div>
+                </div>
+                <div class="col col-3 d-none d-lg-table-cell p-0 m-0">
+                    <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                        Email
+                    </div>
+                </div>
+                <div class="col col-3 p-0 m-0">
+                    <div class="container-fluid d-flex justify-content-end p-0">
+                        <p class="text-muted px-3 m-0">Action</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--user row-->
+        <div class="row border-bottom align-items-center p-3">
+            <div class="col col-2 p-0 m-0">
+                <p class="text-muted text-start m-0">User</p>
+            </div>
+            <div class="col col-7 col-lg-2 py-0 ps-0 pe-3 m-0">
+                <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                    Usernameeminem
+                </div>
+            </div>
+            <div class="col col-2 d-none d-lg-table-cell py-0 ps-0 pe-3 m-0">
+                <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                    0987 654 3210
+                </div>
+            </div>
+            <div class="col col-3 d-none d-lg-table-cell py-0 ps-0 pe-3 m-0">
+                <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                    pnusr3#uber.commerce
+                </div>
+            </div>
+            <div class="col col-3 p-0 m-0">
+                <div class="container-fluid d-flex justify-content-end p-0">
+                    <a asp-area="" asp-controller="AdminMngUser" asp-action="EditUsers" class="btn btn-lightz btn-sm m-0 py-1.25 px-4">Edit</a>
+                </div>
+            </div>
+        </div>
+
+        <!--admin row-->
+        <div class="row border-bottom align-items-center p-3">
+            <div class="col col-2 p-0 m-0">
+                <p class="text-muted text-start m-0">Admin</p>
+            </div>
+            <div class="col col-7 col-lg-2 py-0 ps-0 pe-3 m-0">
+                <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                    Usernameeminem
+                </div>
+            </div>
+            <div class="col col-2 d-none d-lg-table-cell py-0 ps-0 pe-3 m-0">
+                <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                    0987 654 3210
+                </div>
+            </div>
+            <div class="col col-3 d-none d-lg-table-cell py-0 ps-0 pe-3 m-0">
+                <div class="text-muted text-start m-0" style="width:100%;height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+                    pnusr3#uber.commerce
+                </div>
+            </div>
+            <div class="col col-3 p-0 m-0">
+                <div class="container-fluid d-flex justify-content-end p-0">
+                    <a asp-area="" asp-controller="AdminMngUser" asp-action="EditAdmin" class="btn btn-lightz btn-sm m-0 py-1.25 px-4">Edit</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<!--Removed Accounts-->
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">Removed Accounts</h6>
+    </div>
+    <hr class="m-0" />
+    <div class="container-fluid bg-white rounded-bottom p-3" style="height:fit-content">
+        <!-- use this div tag if there is record in db else use the table below, same with the others
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center p-0" style="min-height:inherit; height:inherit">
+            <h5 class="fw-normal" style="color:lightgray">nothing to show yet</h5>
+        </div>
+        -->
+        <div class="row border-bottom p-3">
+            <div class="col col-12 p-0 pb-3 m-0">
+                <p class="text-muted text-start fw-bold m-0">Account type : User</p>
+            </div>
+            <div class="col col-12 p-0 pb-3 m-0">
+                <table class="text-muted w-100 m-0">
+                    <tbody>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Username</td>
+                            <td style="padding-left:10px;padding-bottom:10px">: Usernameeminem</td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Phone</td>
+                            <td style="padding-left:10px;padding-bottom:10px">: 0987 654 3210</td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Email</td>
+                            <td style="padding-left:10px;padding-bottom:10px">: pnusr3#uber.commerce</td>
+                        </tr>
+                        <tr style="vertical-align:top">
+                            <td style="width:110px">Date removed</td>
+                            <td style="padding-left:10px">: 10-31-2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

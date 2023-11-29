@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Officials";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminOFC.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+</head>
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Officials</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">List of Officials and Details</h6>
+        <a asp-area="" asp-controller="AdminOfficials" asp-action="AddOfficials" class="btn btn-secondaryz btn-sm m-0 py-1.25 px-4">Add</a>
+    </div>
+    <hr class="m-0" />
+    <div class="container-fluid bg-white rounded-bottom p-3" style="height:fit-content">
+        <!-- use this div tag if there is record in db else use the table below, same with the others
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center p-0" style="min-height:inherit; height:inherit">
+            <h5 class="fw-normal" style="color:lightgray">nothing to show yet</h5>
+        </div>
+        -->
+
+        <div class="row border-bottom px3 pt-3 pb-4 mx-5">
+            <div class="col col-12 col-lg-3 p-0">
+                <div class="container-fluid d-flex justify-content-center p-0">
+                    <div class="rounded-3 mb-3 mb-lg-0" style="background-color:lightgray;width:150px;height:150px"></div>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-9 ps-lg-3">
+                <p class="text-muted text-center text-lg-start">Name</p>
+                <p class="text-muted text-center text-lg-start">Position</p>
+                <div class="container-fluid d-flex align-items-center align-items-lg-end justify-content-center justify-content-lg-start p-0" style="height:45%">
+                    <a asp-area="" asp-controller="AdminOfficials" asp-action="EditOfficials" class="btn btn-lightz btn-sm m-0 py-1.25 px-5">Edit</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,84 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin/adminMU.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" asp-append-version="true" />
+</head>
+
+<div class="container-fluid bg-white shadow-sm py-3 px-5 mb-4">
+    <h5>Manage Users - Add an Admin Account</h5>
+</div>
+
+<div class="container-fluid py-0 px-5 mb-4">
+    <div class="container-fluid bg-white rounded-top d-flex justify-content-between align-items-center p-3">
+        <h6 class="m-0">Admin Account's Details</h6>
+    </div>
+    <hr class="m-0" />
+    <form>
+        <div class="container-fluid bg-white rounded-bottom px-3 pt-3 pb-4" style="min-height:150px; height:fit-content">
+            <div class="container-fluid p-0 d-flex flex-column">
+                <h6>Account Credentials</h6>
+                <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="username">
+                    <label for="floatingInput">Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingInput" placeholder="pwr">
+                    <label for="floatingInput">Password</label>
+                </div>
+                <hr class="mx-1 mb-4" />
+                <h6>Personal Information</h6>
+                <div>
+                    <div class="d-flex flex-row justify-content-start align-items-center mt-3">
+                        <div class="mb-3" style="width:120px"><label class="form-label fs-6">Affliated Office:</label></div>
+                        <div class="flex-grow-1 mb-3">
+                            <select class="form-select py-3" aria-label="select-form" id="select-form" onchange="chsenOpt(this)">
+                                <option value="" selected>Choose an option</option>
+                                <option value="opt1">Option 1</option>
+                                <option value="opt2">Option 2</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3" style="margin-left:120px" id="appdpp">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="office">
+                        <label for="floatingInput">Name of office </label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="nickname">
+                    <label for="floatingInput">Nickname</label>
+                </div>
+                <div class="d-flex flex-column flex-lg-row">
+                    <div class="form-floating flex-fill pe-0 pe-lg-3 mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone">
+                        <label for="floatingInput">Phone number</label>
+                    </div>
+                    <div class="form-floating flex-fill mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="email">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label fs-6">Upload Photo:</label>
+                    <input class="form-control" type="file" id="formFile" accept="image/png">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex flex-column px-0 py-4" style="height:fit-content">
+            <button type="submit" class="btn btn-secondary">Add</button>
+        </div>
+        <div class="container-fluid d-flex flex-column p-0" style="height:fit-content">
+            <a type="reset" asp-area="" asp-controller="AdminMngUser" asp-action="ShowUsers" class="btn btn-secondaryx">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<script src="~/js/admin/admin.js" asp-append-version="true"></script>
